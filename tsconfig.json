@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es5", "es6", "dom", "es2017.object", "esnext"],
+    "jsx": "react",
+    "outDir": "./dist/",
+    "pretty": true,
+    "rootDir": "./",
+    "strict": true,
+    "noImplicitAny": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "experimentalDecorators": true,
+
+  },
+  "formatCodeOptions": {
+    "indentSize": 4,
+    "tabSize": 4
+  },
+  "include": [
+    "./src/**/*",
+    "./webpack.config.ts",
+    "./webpack.lib.config.ts"
+  ]
+}

@@ -1,0 +1,60 @@
+### macOS ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+.vscode
+.vs
+.idea
+*.gitkeep
+node_modules/
+build/
+*.iml
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+src/**/*.js
+src/**/*.js.map
+typings
+dist
+lib
+package-lock.json
+.npmrc
+.yarnrc
+yarn-error.log
+# yarn2 files
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
+/.eslintcache
+/.npmrc
+/.yarnrc
+/.yarnrc.yml
+/webpack.*.config.js
