@@ -5,14 +5,12 @@
     "moduleResolution": "node",
     "outDir": "dist",
     "pretty": true,
-    "rootDir": "./",
+    "baseUrl": ".",
     "strict": true,
     "noImplicitAny": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "src",
     "experimentalDecorators": true,
-
   },
   "formatCodeOptions": {
     "indentSize": 4,
