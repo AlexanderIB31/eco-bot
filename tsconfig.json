@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
     "module": "commonjs",
-    "lib": ["es5", "es6", "dom", "es2017.object", "esnext"],
-    "jsx": "react",
-    "outDir": "./dist/",
+    "outDir": "./build/",
     "pretty": true,
     "rootDir": "./",
     "strict": true,
@@ -20,8 +18,6 @@
     "tabSize": 4
   },
   "include": [
-    "./src/**/*",
-    "./webpack.config.ts",
-    "./webpack.lib.config.ts"
+    "./src/**/*"
   ]
 }
