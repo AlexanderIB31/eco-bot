@@ -13,8 +13,6 @@ module.exports = {
     extends: [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "airbnb-typescript",
-        "plugin:node/recommended",
         "plugin:import/recommended",
         "plugin:import/typescript",
     ],
@@ -31,4 +29,8 @@ module.exports = {
         "@typescript-eslint/eslint-plugin",
         "import"
     ],
+    rules: {
+        "indent": "off",
+        "@typescript-eslint/indent": ["error", 4]
+    }
 };
