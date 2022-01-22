@@ -44,7 +44,7 @@ bot.action('first', ctx => {
     ctx.reply('First button is pressed');
 });
 
-bot.action('first', ctx => {
+bot.action('second', ctx => {
     ctx.reply('Second button is pressed');
 });
 
