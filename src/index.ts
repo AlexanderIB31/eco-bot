@@ -40,13 +40,13 @@ bot.command('keyboard', (ctx) => {
   );
 });
 
-bot.on('callback_query', (ctx) => {
-  // Explicit usage
-  ctx.telegram.answerCbQuery(ctx.callbackQuery.id);
+// bot.on('callback_query', (ctx) => {
+//   // Explicit usage
+//   ctx.telegram.answerCbQuery(ctx.callbackQuery.id);
 
-  // Using context shortcut
-  ctx.answerCbQuery();
-});
+//   // Using context shortcut
+//   ctx.answerCbQuery();
+// });
 
 bot.on('inline_query', (ctx) => {
   const result = [];
