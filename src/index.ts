@@ -57,8 +57,16 @@ bot.on('inline_query', (ctx) => {
   ctx.answerInlineQuery(result);
 });
 
-bot.launch();
-
+if (process.env.NODE_ENV === 'production') {
+  bot.launch({
+      webhook: {
+          domain: 'https://where-is-recycling-bot.herokuapp.com/',
+          port: parseInt(process.env.PORT || '3000')
+      }
+  })
+} else {
+  bot.launch()
+}
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'));

@@ -3,7 +3,7 @@
     "target": "esnext",
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "./build/",
+    "outDir": "dist",
     "pretty": true,
     "rootDir": "./",
     "strict": true,
