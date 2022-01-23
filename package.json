@@ -28,12 +28,14 @@
   "author": "asvetly",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^9.6.4",
     "telegraf": "4.6.0"
   },
   "devDependencies": {
     "@types/node": "16.11.21",
     "@typescript-eslint/eslint-plugin": "5.10.0",
     "@typescript-eslint/parser": "5.10.0",
+    "dotenv": "^14.2.0",
     "eslint": "8.7.0",
     "eslint-plugin-import": "2.25.4",
     "husky": "7.0.4",

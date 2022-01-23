@@ -5,7 +5,7 @@ const token = process.env.TELEGRAM_TOKEN ?? '';
 const bot = new Telegraf(token);
 
 bot.start((ctx) => {
-    ctx.reply('Hello ' + ctx.from.first_name + '!');
+    ctx.reply('Привет,  ' + ctx.from.first_name + '!');
 });
 
 bot.help((ctx) => {
@@ -22,13 +22,13 @@ bot.command('quit', (ctx) => {
     ctx.leaveChat();
 });
 
-bot.on('text', (ctx) => {
-    // Explicit usage
-    ctx.telegram.sendMessage(ctx.message.chat.id, `Hello ${ctx.state.role}`);
+// bot.on('text', (ctx) => {
+//     // Explicit usage
+//     ctx.telegram.sendMessage(ctx.message.chat.id, `Hello ${ctx.state.role}`);
     
-    // Using context shortcut
-    ctx.reply(`Hello ${ctx.state.role}`);
-});
+//     // Using context shortcut
+//     ctx.reply(`Hello ${ctx.state.role}`);
+// });
 
 bot.command('keyboard', (ctx) => {
     ctx.reply(
@@ -48,13 +48,13 @@ bot.action('second', ctx => {
     ctx.reply('Second button is pressed');
 });
 
-bot.on('callback_query', (ctx) => {
-    // Explicit usage
-    ctx.telegram.answerCbQuery(ctx.callbackQuery.id);
+// bot.on('callback_query', (ctx) => {
+//     // Explicit usage
+//     ctx.telegram.answerCbQuery(ctx.callbackQuery.id);
 
-    // Using context shortcut
-    // ctx.answerCbQuery();
-});
+//     // Using context shortcut
+//     // ctx.answerCbQuery();
+// });
 
 bot.on('inline_query', (ctx) => {
     const result = [];
