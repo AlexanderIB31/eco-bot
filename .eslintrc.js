@@ -1,31 +1,25 @@
 module.exports = {
+    root: true,
     env: {
-        browser: true,
         node: true,
         es6: true,
     },
-    extends: [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "airbnb",
-    ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         project: "./tsconfig.json",
         sourceType: "module",
-        ecmaVersion: 2018,
-        ecmaFeatures: {
-            jsx: true,
-        }
+        ecmaVersion: 2020
     },
+    extends: [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+    ],
     settings: {
-        react: {
-            version: "detect",
-        },
         "import/resolver": {
             node: {
-                extensions: [".ts", ".tsx", ".js", ".jsx"],
+                extensions: [".ts", ".js"],
                 paths: ["src"],
             },
         },
@@ -33,46 +27,10 @@ module.exports = {
     plugins: [
         "@typescript-eslint",
         "@typescript-eslint/eslint-plugin",
-        "eslint-plugin-import",
-        "eslint-plugin-react-hooks",
-        "eslint-plugin-react",
-        "react",
+        "import"
     ],
     rules: {
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-explicit-any": "off",
-        "arrow-parens": "off",
-        "class-methods-use-this": "off",
-        "implicit-arrow-linebreak": "off",
-        "import/extensions": "off",
-        "import/no-extraneous-dependencies": "off",
-        "import/prefer-default-export": "off",
-        "indent": ["error", 4, { SwitchCase: 1 }],
-        "jsx-a11y/anchor-is-valid": "off",
-        "jsx-a11y/click-events-have-key-events": "off",
-        "jsx-a11y/no-static-element-interactions": "off",
-        "linebreak-style": "off",
-        "lines-between-class-members": "off",
-        "max-len": ["error", 180],
-        "no-console": ["error", { allow: ["error", "warning"] }],
-        "no-empty": ["error", { allowEmptyCatch: true }],
-        "no-plusplus": "off",
-        "no-restricted-syntax": "off",
-        "no-shadow": "off",
-        "no-underscore-dangle": "off",
-        "object-curly-newline": ["error", { multiline: true, consistent: true }],
-        "operator-linebreak": ["error", "after", { overrides: { "=": "after", "?": "before", ":": "before" } }],
-        "react/destructuring-assignment": "off",
-        "react/jsx-curly-spacing": ["error", { when: "always", spacing: { objectLiterals: "never" }}],
-        "react/jsx-filename-extension": ["error", { extensions: [".jsx", ".tsx"] }],
-        "react/jsx-indent-props": ["error", 4],
-        "react/jsx-indent": ["error", 4],
-        "react/jsx-props-no-spreading": ["error", { custom: "ignore" }],
-        "react/jsx-one-expression-per-line": "off",
-        "react/no-array-index-key": "off",
-        "react/prop-types": "off",
-        "react/sort-comp": "off",
-        "react/static-property-placement": "off",
-        "template-curly-spacing": ["error", "always"],
+        "indent": "off",
+        "@typescript-eslint/indent": ["error", 4]
     }
 };
